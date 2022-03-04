@@ -1,0 +1,348 @@
+---------------------學習項目---------------------
+資料結構
+Array
+Linked List
+Stack & Queue
+String
+Tree
+
+演算法
+Sort
+Binary Search
+Two Pointers
+Sliding Window
+Breadth-First Search / Depth-First Search
+Recursion / Backtracking
+Dynamic Programming
+Greedy
+---------------------2021-----------------------
+------------------------------------------------
+
+9/16
+
+- Easy
+20. Valid Parentheses
+70. Climbing Stairs
+283. Move Zeroes
+
+------------------------------------------------
+
+9/17 (Tree)
+
+- Easy
+94. Binary Tree Inorder Traversal
+101. Symmetric Tree
+226. Invert Binary Tree
+617. Merge Two Binary Trees
+
+- Medium
+102. Binary Tree Level Order Traversal
+
+------------------------------------------------
+
+9/27 (Backtracking)
+
+- Medium
+17. Letter Combinations of a Phone Number
+39. Combination Sum
+46. Permutations
+
+------------------------------------------------
+
+9/28 (Array)
+
+- Easy
+136. Single Number
+
+------------------------------------------------
+
+9/29 (Array)
+
+- Medium
+48. Rotate Image
+
+------------------------------------------------
+
+10/06 (Array)
+
+- Easy
+121. Best Time to Buy and Sell Stock
+
+- Medium
+11. Container With Most Water
+
+------------------------------------------------
+
+10/07 (Array)
+
+- Medium
+64. Minimum Path Sum
+287. Find the Duplicate Number
+739. Daily Temperatures
+
+------------------------------------------------
+
+10/08 (String)
+
+- Medium
+49. Group Anagrams
+
+------------------------------------------------
+
+10/12 (String)
+
+- Medium
+3. Longest Substring Without Repeating Characters
+394. Decode String
+763. Partition Labels
+
+------------------------------------------------
+
+10/13 (Linked List)
+
+- Easy
+83. Remove Duplicates from Sorted List
+141. Linked List Cycle
+160. Intersection of Two Linked Lists
+203. Remove Linked List Elements
+234. Palindrome Linked List
+237. Delete Node in a Linked List
+
+------------------------------------------------
+
+10/14 (Bits)
+
+191. Number of 1 Bits
+338. Counting Bits
+
+------------------------------------------------
+
+10/15 (Dynamic Programming)
+
+55. Jump Game
+70. Climbing Stairs
+322. Coin Change
+
+------------------------------------------------
+
+10/18 (Sort)
+
+Bubble Sort
+Insertion Sort
+Selection Sort
+
+------------------------------------------------
+---------------------2022-----------------------
+------------------------------------------------
+
+01/12(Array)
+
+- Easy
+53. Maximum Subarray
+155. Min Stack
+217. Contains Duplicate
+448. Find All Numbers Disappeared in an Array
+
+------------------------------------------------
+
+01/17(Array)
+
+- Easy
+350. Intersection of Two Arrays II
+
+- Medium
+200. Number of Islands
+
+------------------------------------------------
+
+01/18(Array)
+
+- Easy
+118. Pascal's Triangle
+
+- Medium
+36. Valid Sudoku
+74. Search a 2D Matrix
+
+------------------------------------------------
+
+01/19(String)
+
+- Easy
+242. Valid Anagram
+383. Ransom Note
+387. First Unique Character in a String
+
+- Medium
+22. Generate Parentheses
+
+------------------------------------------------
+
+01/20 (Linked List)
+
+- Easy
+21. Merge Two Sorted Lists
+141. Linked List Cycle
+203. Remove Linked List Elements
+
+------------------------------------------------
+
+01/21 (Linked List)
+
+- Easy
+83. Remove Duplicates from Sorted List
+206. Reverse Linked List
+
+------------------------------------------------
+
+01/22 (Stack & Queue)
+
+- Easy
+20. Valid Parentheses
+232. Implement Queue using Stacks
+2073. Time Needed to Buy Tickets
+
+- Medium
+114. Flatten Binary Tree to Linked List
+
+------------------------------------------------
+
+01/24(tree)
+
+- Easy
+94. Binary Tree Inorder Traversal
+101. Symmetric Tree
+104. Maximum Depth of Binary Tree
+144. Binary Tree Preorder Traversal 
+145. Binary Tree Postorder Traversal
+
+------------------------------------------------
+
+01/25(tree)
+
+- Easy
+112. Path Sum
+226. Invert Binary Tree
+
+- Medium
+102. Binary Tree Level Order Traversal
+
+------------------------------------------------
+
+01/26(tree)
+
+- Easy
+700. Search in a Binary Search Tree
+
+- Medium
+701. Insert into a Binary Search Tree
+
+------------------------------------------------
+
+01/27(tree)
+
+- Easy
+235. Lowest Common Ancestor of a Binary Search Tree
+653. Two Sum IV - Input is a BST
+
+- Medium
+98. Validate Binary Search Tree
+
+------------------------------------------------
+
+02/08(array)
+
+- Medium
+78. Subsets (use Cascading, Backtracking)y 
+    totle : O(n)
+
+------------------------------------------------
+
+02/09(array)
+
+- Medium
+79. Word Search (Backtracking_DFS)
+    Space complexity 
+    totle : O(m * n + 4^l)
+
+------------------------------------------------
+
+02/10(Dynamic Programming)
+
+- Medium
+198. House Robber (DP)
+------------------------------------------------
+
+02/14(Binary Search)
+
+- Medium
+33. Search in Rotated Sorted Array
+34. Find First and Last Position of Element in Sorted Array
+74. Search a 2D Matrix
+
+------------------------------------------------
+
+02/15(Binary Search)
+
+- Medium
+153. Find Minimum in Rotated Sorted Array
+162. Find Peak Element
+
+------------------------------------------------
+
+02/22(Sliding Window)
+
+- Medium
+438. Find All Anagrams in a String
+
+------------------------------------------------
+
+02/23(Two Pointers)
+
+- Easy
+844. Backspace String Compare
+
+------------------------------------------------
+
+02/24(sort)
+
+- Medium
+148. Sort List
+    (Top Down Merge Sort)
+    (Down Top Merge Sort)
+    
+------------------------------------------------
+
+02/25(Breadth-First Search / Depth-First Search)
+
+- Medium
+797. All Paths From Source to Target
+1091. Shortest Path in Binary Matrix
+
+------------------------------------------------
+
+03/02(Breadth-First Search / Depth-First Search)
+
+- Medium
+1143. Longest Common Subsequence
+
+------------------------------------------------
+
+03/03(Dynamic Programming)
+
+- Easy
+976. Largest Perimeter Triangle
+1779. Find Nearest Point That Has the Same X or Y Coordinate
+
+- Medium
+413. Arithmetic Slices
+583. Delete Operation for Two Strings
+
+------------------------------------------------
+
+03/04(Dynamic Programming)
+
+- Medium
+799. Champagne Tower
+
+------------------------------------------------
