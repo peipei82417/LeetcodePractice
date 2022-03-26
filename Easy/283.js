@@ -1,8 +1,9 @@
 /*
 283. Move Zeroes
 
-created by 2022/03/06
+created by 2022/03/21
 
+Greedy
 Time complexity
     totle : O(n)
 Space complexity
@@ -14,28 +15,23 @@ Space complexity
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function (nums) {
-    let i = 0,
-        j = 1;
-    while (j < nums.length) {
-        if (nums[i] === 0) {
-            while (nums[j] === 0) {
-                j++;
+    const N = nums.length;
+    let l = 0, r = 1;
+    while (r < N) {
+        if (nums[l] === 0) {
+            while (nums[r] === 0) {
+                r++;
             }
-            if (nums[j] === undefined) {
-                break;
-            }
-            let temp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = temp;
+            if (r >= N) break;
+            let temp = nums[l];
+            nums[l] = nums[r];
+            nums[r] = temp;
         }
-        i++;
-        j++;
+        l++; r++;
     }
 };
 
 let nums = [0, 1, 0, 3, 12];
-//nums = [0, 0, 1];
-//nums = [1, 0, 1];
-//nums = [0, 1, 0];
-moveZeroes(nums);
+nums = [0, 0]
+moveZeroes(nums)
 console.log(nums);
