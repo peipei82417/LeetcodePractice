@@ -19,11 +19,11 @@ var interpret = function (command) {
     while (i < command.length) {
         const s = command[i];
         if (s === "(") {
-            const s2 = command[i + 1]
-            if (s2 === ')') {
+            const s2 = command[i + 1];
+            if (s2 === ")") {
                 result += "o";
                 i++;
-            } else if (s2 === 'a') {
+            } else if (s2 === "a") {
                 result += "al";
                 i += 3;
             }

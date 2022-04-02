@@ -1,4 +1,4 @@
-import { root } from "./DataStructure/tree.js"
+import { root } from "../DataStructure/tree.js";
 /*
 404. Sum of Left Leaves
 
@@ -30,15 +30,15 @@ var sumOfLeftLeaves = function (root) {
     let sum = 0;
     let queue = [root];
     while (queue.length) {
-        const node = queue.shift()
+        const node = queue.shift();
         if (node.left) {
             if (!node.left.left && !node.left.right) {
                 sum += node.left.val;
             }
-            queue.push(node.left)
+            queue.push(node.left);
         }
         if (node.right) {
-            queue.push(node.right)
+            queue.push(node.right);
         }
     }
     return sum;

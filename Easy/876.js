@@ -1,4 +1,4 @@
-import { ListNode, head } from './DataStructure/linkedlist.js';
+import { ListNode, head } from "../DataStructure/linkedlist.js";
 /*
 876. Middle of the Linked List
 

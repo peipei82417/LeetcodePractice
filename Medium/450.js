@@ -1,4 +1,4 @@
-import { TreeNode, root } from './DataStructure/tree.js'
+import { TreeNode, root } from "../DataStructure/tree.js";
 
 /*
 450. Delete Node in a BST
@@ -31,9 +31,9 @@ var deleteNode = function (root, key) {
         return root;
     }
     if (key < root.val) {
-        root.left = deleteNode(root.left, key)
+        root.left = deleteNode(root.left, key);
     } else if (key > root.val) {
-        root.right = deleteNode(root.right, key)
+        root.right = deleteNode(root.right, key);
     } else {
         if (!root.left) {
             return root.right;

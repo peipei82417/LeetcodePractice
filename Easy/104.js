@@ -1,4 +1,4 @@
-import { root } from "./DataStructure/tree.js"
+import { root } from "../DataStructure/tree.js";
 /*
 104. Maximum Depth of Binary Tree
 
@@ -25,8 +25,8 @@ var maxDepth = function (root) {
     if (!root) {
         return 0;
     }
-    let maxLeft = maxDepth(root.left)
-    let maxRight = maxDepth(root.right)
+    let maxLeft = maxDepth(root.left);
+    let maxRight = maxDepth(root.right);
     return Math.max(maxLeft, maxRight) + 1;
 };
 

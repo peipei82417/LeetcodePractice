@@ -1,4 +1,4 @@
-import { TreeNode } from "./DataStructure/tree.js";
+import { TreeNode } from "../DataStructure/tree.js";
 /*
 108. Convert Sorted Array to Binary Search Tree
 

@@ -1,4 +1,4 @@
-import { ListNode, head } from './DataStructure/linkedlist.js';
+import { ListNode, head } from "../DataStructure/linkedlist.js";
 /*
 82. Remove Duplicates from Sorted List II
 
@@ -30,7 +30,7 @@ var deleteDuplicates = function (head) {
         while (head && head.val === value) {
             head = head.next;
         }
-        return deleteDuplicates(head)
+        return deleteDuplicates(head);
     }
     head.next = deleteDuplicates(head.next);
     return head;

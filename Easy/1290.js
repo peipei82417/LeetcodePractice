@@ -1,4 +1,4 @@
-import { ListNode, head } from './DataStructure/linkedlist.js';
+import { ListNode, head } from "../DataStructure/linkedlist.js";
 /*
 1290. Convert Binary Number in a Linked List to Integer
 

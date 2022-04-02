@@ -19,11 +19,14 @@ var areAlmostEqual = function (s1, s2) {
         return false;
     }
 
-    let count = 0, temp = new Array(2).fill('');
+    let count = 0,
+        temp = new Array(2).fill("");
     for (let i = 0; i < s1.length; i++) {
         if (s1[i] !== s2[i]) {
             count++;
-            if (count > 2) { return false; }
+            if (count > 2) {
+                return false;
+            }
             if (count === 1) {
                 temp[0] = s1[i];
                 temp[1] = s2[i];
@@ -40,8 +43,9 @@ var areAlmostEqual = function (s1, s2) {
     return true;
 };
 
-let s1 = "bank", s2 = "kanb";
+let s1 = "bank",
+    s2 = "kanb";
 //s1 = "attack", s2 = "defend";
 //s1 = "kelb", s2 = "kelb";
-s1 = "aa", s2 = "ac";
+(s1 = "aa"), (s2 = "ac");
 console.log(areAlmostEqual(s1, s2));

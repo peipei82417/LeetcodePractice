@@ -1,4 +1,4 @@
-import { root } from '../DataStructure/tree.js'
+import { root } from ".../DataStructure/tree.js";
 
 /*
 662. Maximum Width of Binary Tree
@@ -29,7 +29,9 @@ var widthOfBinaryTree = function (root) {
         return 0;
     }
     const queue = [[root, 0]];
-    let result = 0, l = 0, r = 0;
+    let result = 0,
+        l = 0,
+        r = 0;
     while (queue.length) {
         const size = queue.length;
         const startIdx = queue[0][1];
@@ -54,4 +56,4 @@ var widthOfBinaryTree = function (root) {
     return result;
 };
 
-console.log(widthOfBinaryTree(root))
+console.log(widthOfBinaryTree(root));

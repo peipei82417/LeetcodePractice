@@ -1,4 +1,4 @@
-import { root } from './DataStructure/tree.js'
+import { root } from "../DataStructure/tree.js";
 
 /*
 103. Binary Tree Zigzag Level Order Traversal
@@ -54,5 +54,5 @@ var zigzagLevelOrder = function (root) {
     return result;
 };
 
-const ans = zigzagLevelOrder(root)
-console.log(ans)
+const ans = zigzagLevelOrder(root);
+console.log(ans);

@@ -1,4 +1,4 @@
-import { ListNode, head, head1 } from './DataStructure/linkedlist.js'
+import { ListNode, head, head1 } from "../DataStructure/linkedlist.js";
 /*
 21. Merge Two Sorted Lists
 
@@ -43,6 +43,5 @@ var mergeTwoLists = function (list1, list2) {
     }
     return start.next;
 };
-
 
 console.log(mergeTwoLists(head, head1));

@@ -1,4 +1,4 @@
-import { head, ListNode } from './DataStructure/linkedlist.js'
+import { head, ListNode } from "../DataStructure/linkedlist.js";
 /*
 148. Sort List
 
@@ -60,8 +60,9 @@ var sortList = function (head) {
     if (!head || !head.next) {
         return head;
     }
-    let len = 1, curr = head;
-    while (curr = curr.next) {
+    let len = 1,
+        curr = head;
+    while ((curr = curr.next)) {
         len++;
     }
     let dummyHead = new ListNode(0);
@@ -91,7 +92,7 @@ let split = function (head, n) {
         head.next = null;
     }
     return rest;
-}
+};
 
 let merge = function (l1, l2) {
     let dummyHead = new ListNode(0);
@@ -111,7 +112,7 @@ let merge = function (l1, l2) {
         tail = tail.next;
     }
     return [dummyHead.next, tail];
-}
+};
 
 console.log(head);
 sortList(head);
