@@ -21,7 +21,7 @@ var champagneTower = function (poured, query_row, query_glass) {
     currRow[0] = poured;
 
     for (let i = 0; i < query_row; i++) {
-        const nextRow = new Array(100).fill(0)
+        const nextRow = new Array(100).fill(0);
         for (let j = 0; j < 100; j++) {
             if (currRow[j] > 1) {
                 const rem = currRow[j] - 1;
@@ -36,8 +36,10 @@ var champagneTower = function (poured, query_row, query_glass) {
     return Math.min(1, currRow[query_glass]);
 };
 
-let poured = 1, query_row = 1, query_glass = 1
-poured = 2, query_row = 1, query_glass = 1;
-poured = 100000009, query_row = 33, query_glass = 17;
+let poured = 1,
+    query_row = 1,
+    query_glass = 1;
+(poured = 2), (query_row = 1), (query_glass = 1);
+(poured = 100000009), (query_row = 33), (query_glass = 17);
 
 console.log(champagneTower(poured, query_row, query_glass));

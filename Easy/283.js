@@ -16,7 +16,8 @@ Space complexity
  */
 var moveZeroes = function (nums) {
     const N = nums.length;
-    let l = 0, r = 1;
+    let l = 0,
+        r = 1;
     while (r < N) {
         if (nums[l] === 0) {
             while (nums[r] === 0) {
@@ -27,11 +28,12 @@ var moveZeroes = function (nums) {
             nums[l] = nums[r];
             nums[r] = temp;
         }
-        l++; r++;
+        l++;
+        r++;
     }
 };
 
 let nums = [0, 1, 0, 3, 12];
-nums = [0, 0]
-moveZeroes(nums)
+nums = [0, 0];
+moveZeroes(nums);
 console.log(nums);

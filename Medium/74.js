@@ -1,4 +1,3 @@
-
 /*
 74. Search a 2D Matrix
 
@@ -29,7 +28,8 @@ var searchMatrix = function (matrix, target) {
     }
 
     const arr = matrix[row];
-    let l = 0, r = arr.length;
+    let l = 0,
+        r = arr.length;
     while (l < r) {
         const mid = Math.floor((l + r) / 2);
         if (arr[mid] === target) {
@@ -43,8 +43,6 @@ var searchMatrix = function (matrix, target) {
 
     return false;
 };
-
-
 
 // var searchMatrix = function (matrix, target) {
 //     let l = 0, r = matrix.length
@@ -74,9 +72,10 @@ var searchMatrix = function (matrix, target) {
 // };
 
 let matrix = [
-    [1, 3, 5, 7],
-    [10, 11, 16, 20],
-    [23, 30, 34, 50]
-], target = 50;
+        [1, 3, 5, 7],
+        [10, 11, 16, 20],
+        [23, 30, 34, 50],
+    ],
+    target = 50;
 
 console.log(searchMatrix(matrix, target));

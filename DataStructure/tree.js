@@ -1,8 +1,8 @@
 class TreeNode {
     constructor(val, left = null, right = null) {
-        this.val = (val === undefined ? 0 : val);
-        this.left = (left === undefined ? null : left);
-        this.right = (right === undefined ? null : right);
+        this.val = val === undefined ? 0 : val;
+        this.left = left === undefined ? null : left;
+        this.right = right === undefined ? null : right;
     }
 }
 
@@ -18,4 +18,4 @@ n1.right = n3;
 n3.left = n4;
 n3.right = n5;
 
-export { TreeNode, root }
+export { TreeNode, root };

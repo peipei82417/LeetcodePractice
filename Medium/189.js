@@ -26,11 +26,13 @@ const revNums = function (nums, start, end) {
         let temp = nums[start];
         nums[start] = nums[end];
         nums[end] = temp;
-        start++; end--;
+        start++;
+        end--;
     }
-}
+};
 
-let nums = [1, 2, 3, 4, 5, 6, 7], k = 3;
-nums = [-1], k = 2;
+let nums = [1, 2, 3, 4, 5, 6, 7],
+    k = 3;
+(nums = [-1]), (k = 2);
 rotate(nums, k);
 console.log(nums);

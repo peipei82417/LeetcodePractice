@@ -35,7 +35,10 @@ Space complexity
 // };
 
 var jump = function (nums) {
-    let len = nums.length - 1, curr = -1, next = 0, result = 0
+    let len = nums.length - 1,
+        curr = -1,
+        next = 0,
+        result = 0;
     for (let i = 0; next < len; i++) {
         if (i > curr) {
             result++;
@@ -45,6 +48,9 @@ var jump = function (nums) {
     }
     return result;
 };
-let nums = [5, 6, 4, 4, 6, 9, 4, 4, 7, 4, 4, 8, 2, 6, 8, 1, 5, 9, 6, 5, 2, 7, 9, 7, 9, 6, 9, 4, 1, 6, 8, 8, 4, 4, 2, 0, 3, 8, 5];
+let nums = [
+    5, 6, 4, 4, 6, 9, 4, 4, 7, 4, 4, 8, 2, 6, 8, 1, 5, 9, 6, 5, 2, 7, 9, 7, 9,
+    6, 9, 4, 1, 6, 8, 8, 4, 4, 2, 0, 3, 8, 5,
+];
 // nums = [2, 3, 0, 1, 4];
-console.log(jump(nums))
+console.log(jump(nums));

@@ -36,6 +36,7 @@ var minDistance = function (word1, word2) {
 
 //let word1 = "sea", word2 = "eat";
 //let word1 = "a", word2 = "a";
-let word1 = "leetcode", word2 = "etco";
+let word1 = "leetcode",
+    word2 = "etco";
 
 console.log(minDistance(word1, word2));

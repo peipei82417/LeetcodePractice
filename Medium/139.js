@@ -1,4 +1,3 @@
-
 /*
 139. Word Break
 
@@ -16,7 +15,6 @@ Space Complexity
  * @return {boolean}
  */
 var wordBreak = function (s, wordDict) {
-
     let dp = new Array(s.length + 1).fill(false);
 
     dp[0] = true;
@@ -33,7 +31,8 @@ var wordBreak = function (s, wordDict) {
     return dp[s.length];
 };
 
-const s = "leetcode", wordDict = ["leet", "code"]; // true
+const s = "leetcode",
+    wordDict = ["leet", "code"]; // true
 // const s = "applepenapple", wordDict = ["apple", "pen"]; // true
 // const s = "aaaaaaa", wordDict = ["aaaa", "aaa"]; // true
 // const s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]; // false

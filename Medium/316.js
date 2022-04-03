@@ -28,7 +28,7 @@ var removeDuplicateLetters = function (s) {
             continue;
         }
         while (stack.length) {
-            const lastChar = stack[stack.length - 1]
+            const lastChar = stack[stack.length - 1];
             const lastCharIdx = lastChar.charCodeAt() - "a".charCodeAt();
 
             if (freq[lastCharIdx] && lastChar > c) {

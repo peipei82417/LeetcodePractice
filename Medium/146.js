@@ -17,7 +17,7 @@ var LRUCache = function (capacity) {
     this._map = new Map();
 };
 
-/** 
+/**
  * @param {number} key
  * @return {number}
  */
@@ -32,8 +32,8 @@ LRUCache.prototype.get = function (key) {
     return value;
 };
 
-/** 
- * @param {number} key 
+/**
+ * @param {number} key
  * @param {number} value
  * @return {void}
  */
@@ -52,7 +52,6 @@ LRUCache.prototype.put = function (key, value) {
  * var param_1 = obj.get(key)
  * obj.put(key,value)
  */
-
 
 const cachs = new LRUCache(2);
 console.log(cachs.get(2));

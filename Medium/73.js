@@ -55,7 +55,6 @@ var setZeroes = function (matrix) {
     const C = matrix[0].length;
 
     for (let i = 0; i < R; i++) {
-
         // Since first cell for both first row and first column is the same i.e. matrix[0][0]
         // We can use an additional variable for either the first row/column.
         // For this solution we are using an additional variable for the first column
@@ -97,8 +96,15 @@ var setZeroes = function (matrix) {
     }
 };
 
-
-let matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
-matrix = [[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]
-setZeroes(matrix)
+let matrix = [
+    [1, 1, 1],
+    [1, 0, 1],
+    [1, 1, 1],
+];
+matrix = [
+    [0, 1, 2, 0],
+    [3, 4, 5, 2],
+    [1, 3, 1, 5],
+];
+setZeroes(matrix);
 console.log(matrix);

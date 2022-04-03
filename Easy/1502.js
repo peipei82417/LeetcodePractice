@@ -21,9 +21,9 @@ Space complexity
 var canMakeArithmeticProgression = function (arr) {
     arr.sort((a, b) => {
         return a - b;
-    })
+    });
     for (let i = 2; i < arr.length; i++) {
-        if ((arr[i] - arr[i - 1]) !== arr[i - 1] - arr[i - 2]) {
+        if (arr[i] - arr[i - 1] !== arr[i - 1] - arr[i - 2]) {
             return false;
         }
     }
@@ -35,12 +35,14 @@ var canMakeArithmeticProgression = function (arr) {
     let max = -Infinity;
     let min = Infinity;
     for (let i = 0; i < arr.length; i++) {
-        set.add(arr[i])
+        set.add(arr[i]);
         max = Math.max(max, arr[i]);
         min = Math.min(min, arr[i]);
     }
 
-    if (set.size == 1) { return true; }
+    if (set.size == 1) {
+        return true;
+    }
 
     let diff = (max - min) / (arr.length - 1);
     let cur = max;

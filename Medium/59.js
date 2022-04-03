@@ -19,18 +19,25 @@ var generateMatrix = function (n) {
     }
     let result = new Array(n);
     for (let i = 0; i < n; i++) {
-        result[i] = new Array(n).fill(0)
+        result[i] = new Array(n).fill(0);
     }
-    const dir = [[1, 0], [0, 1], [-1, 0], [0, -1]];
+    const dir = [
+        [1, 0],
+        [0, 1],
+        [-1, 0],
+        [0, -1],
+    ];
     const limit = n * n;
-    let currDir = 0, currNum = 2;
-    let i = 0, j = 0;
+    let currDir = 0,
+        currNum = 2;
+    let i = 0,
+        j = 0;
     result[0][0] = 1;
 
     while (currNum <= limit) {
         const [x, y] = dir[currDir];
         if (result[i + y][j + x] === 0) {
-            i += y, j += x;
+            (i += y), (j += x);
             result[i][j] = currNum;
         } else {
             currDir = (currDir + 1) % 4;
@@ -44,5 +51,5 @@ var generateMatrix = function (n) {
     return result;
 };
 
-let n = 5
+let n = 5;
 console.log(generateMatrix(n));

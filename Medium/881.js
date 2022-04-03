@@ -27,18 +27,20 @@ var numRescueBoats = function (people, limit) {
     let result = 0;
     people.sort((a, b) => {
         return a - b;
-    })
-    let l = 0, r = people.length - 1;
+    });
+    let l = 0,
+        r = people.length - 1;
     while (l <= r) {
         result++;
-        if ((people[l] + people[r]) <= limit) {
+        if (people[l] + people[r] <= limit) {
             l++;
         }
         r--;
     }
     return result;
 };
-let people = [3, 1, 7], limit = 7; // 2
+let people = [3, 1, 7],
+    limit = 7; // 2
 // people = [3, 2, 2, 1], limit = 3; // 3
 // people = [3, 8, 7, 1, 4], limit = 9; // 3
 console.log(numRescueBoats(people, limit));

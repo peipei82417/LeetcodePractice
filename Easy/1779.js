@@ -31,6 +31,14 @@ var nearestValidPoint = function (x, y, points) {
     return idx;
 };
 
-let x = 3, y = 4, points = [[1, 2], [3, 1], [2, 4], [2, 3], [4, 4]];
+let x = 3,
+    y = 4,
+    points = [
+        [1, 2],
+        [3, 1],
+        [2, 4],
+        [2, 3],
+        [4, 4],
+    ];
 //let x = 3, y = 4, points = [[2, 3]];
 console.log(nearestValidPoint(x, y, points));

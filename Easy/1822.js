@@ -14,7 +14,8 @@ Space complexity
  * @return {number}
  */
 var arraySign = function (nums) {
-    let i = 0, count = 0;
+    let i = 0,
+        count = 0;
     while (i < nums.length) {
         if (nums[i] === 0) {
             return 0;

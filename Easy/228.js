@@ -33,5 +33,5 @@ var summaryRanges = function (nums) {
     return result;
 };
 
-nums = [0, 1, 2, 4, 5, 7]
-console.log(summaryRanges(nums))
+nums = [0, 1, 2, 4, 5, 7];
+console.log(summaryRanges(nums));

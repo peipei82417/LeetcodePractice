@@ -15,7 +15,8 @@ Space complexity
  */
 var isHappy = function (n) {
     while (n > 4) {
-        let d = n, s = 0;
+        let d = n,
+            s = 0;
         while (d > 0) {
             s += Math.pow(d % 10, 2);
             d = Math.floor(d / 10);
@@ -27,4 +28,4 @@ var isHappy = function (n) {
 
 let n = 19;
 //n = 2;
-console.log(isHappy(n))
+console.log(isHappy(n));

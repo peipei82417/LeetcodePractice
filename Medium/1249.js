@@ -36,4 +36,4 @@ var minRemoveToMakeValid = function (s) {
 const s = "lee(t(c)o)de)";
 // s = "ab(c)d(";
 // s = "))((";
-console.log(minRemoveToMakeValid(s))
+console.log(minRemoveToMakeValid(s));

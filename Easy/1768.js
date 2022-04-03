@@ -15,11 +15,13 @@ Space complexity
  * @return {string}
  */
 var mergeAlternately = function (word1, word2) {
-    let i = 0, j = 0;
+    let i = 0,
+        j = 0;
     let result = "";
     while (i < word1.length && j < word2.length) {
-        result += (word1[i] + word2[j]);
-        i++; j++;
+        result += word1[i] + word2[j];
+        i++;
+        j++;
     }
     if (i < word1.length) {
         result += word1.slice(i, word1.length);
@@ -29,5 +31,6 @@ var mergeAlternately = function (word1, word2) {
     }
     return result;
 };
-let word1 = "ab", word2 = "pqrs"
-console.log(mergeAlternately(word1,word2));
+let word1 = "ab",
+    word2 = "pqrs";
+console.log(mergeAlternately(word1, word2));

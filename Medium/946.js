@@ -28,7 +28,8 @@ var validateStackSequences = function (pushed, popped) {
     return i === len;
 };
 
-let pushed = [1, 2, 3, 4, 5], popped = [4, 5, 3, 2, 1];
+let pushed = [1, 2, 3, 4, 5],
+    popped = [4, 5, 3, 2, 1];
 // popped = [2, 4, 3, 5, 1];
 
 console.log(validateStackSequences(pushed, popped));

@@ -37,7 +37,7 @@ var subsets = function (nums) {
     const result = [];
     const backtrack = function (n, s, subset) {
         if (subset.length === n) {
-            result.push([...subset])
+            result.push([...subset]);
             return;
         }
         for (let i = s; i < nums.length; i++) {
@@ -45,9 +45,9 @@ var subsets = function (nums) {
             backtrack(n, i + 1, subset);
             subset.pop();
         }
-    }
+    };
     for (let i = 0; i < nums.length + 1; i++) {
-        backtrack(i, 0, [])
+        backtrack(i, 0, []);
     }
     return result;
 };

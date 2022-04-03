@@ -1,4 +1,3 @@
-
 /*
 81. Search in Rotated Sorted Array II
 
@@ -16,7 +15,8 @@ Space Complexity
  * @return {boolean}
  */
 var search = function (nums, target) {
-    let l = 0, r = nums.length - 1;
+    let l = 0,
+        r = nums.length - 1;
     while (l <= r) {
         const mid = Math.floor((l + r) / 2);
         if (nums[mid] === target) {
@@ -40,8 +40,7 @@ var search = function (nums, target) {
     return false;
 };
 
-
 // let nums = [2, 5, 6, 0, 0, 1, 2], target = 0;
-let nums = [2, 2, 5, 6, 0, 0, 1, 2], target = 1;
+let nums = [2, 2, 5, 6, 0, 0, 1, 2],
+    target = 1;
 console.log(search(nums, target));
-

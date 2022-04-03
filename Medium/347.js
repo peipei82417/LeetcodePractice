@@ -1,4 +1,3 @@
-
 /*
 347. Top K Frequent Elements
 
@@ -49,7 +48,8 @@ var topKFrequent = function (nums, k) {
         }
     }
     return result;
-}
+};
 
-const nums = [1, 1, 1, 2, 2, 3, 1, 1, 2, 3, 3, 4, 4, 4, 5], k = 4;
+const nums = [1, 1, 1, 2, 2, 3, 1, 1, 2, 3, 3, 4, 4, 4, 5],
+    k = 4;
 console.log(topKFrequent(nums, k));

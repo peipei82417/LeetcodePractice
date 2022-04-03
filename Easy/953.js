@@ -32,10 +32,11 @@ var isAlienSorted = function (words, order) {
                 }
             }
         }
-    };
+    }
     return true;
-}
+};
 
-let words = ["hello", "leetcode"], order = "ahlabcdefgijkmnopqrstuvwxyz";
+let words = ["hello", "leetcode"],
+    order = "ahlabcdefgijkmnopqrstuvwxyz";
 
 console.log(isAlienSorted(words, order));

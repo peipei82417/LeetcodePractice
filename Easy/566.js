@@ -19,8 +19,10 @@ var matrixReshape = function (mat, r, c) {
     if (r * c !== mat.length * mat[0].length) {
         return mat;
     }
-    let result = [], temp = [];
-    let row = 0, col = 0;
+    let result = [],
+        temp = [];
+    let row = 0,
+        col = 0;
     while (row < mat.length) {
         while (col < mat[0].length) {
             temp.push(mat[row][col]);
@@ -30,10 +32,16 @@ var matrixReshape = function (mat, r, c) {
             }
             col++;
         }
-        col = 0; row++;
+        col = 0;
+        row++;
     }
     return result;
 };
 
-let mat = [[1, 2], [3, 4]], r = 1, c = 4
+let mat = [
+        [1, 2],
+        [3, 4],
+    ],
+    r = 1,
+    c = 4;
 console.log(matrixReshape(mat, r, c));

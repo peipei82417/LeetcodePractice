@@ -21,14 +21,14 @@ Space complexity
  * @param {ListNode} head
  * @return {boolean}
  */
-var hasCycle = function(head) {
-    if(!head || !head.next){
+var hasCycle = function (head) {
+    if (!head || !head.next) {
         return false;
     }
-    while(head){
-        if(head.flag){
+    while (head) {
+        if (head.flag) {
             return true;
-        } else { 
+        } else {
             head.flag = true;
         }
         head = head.next;
