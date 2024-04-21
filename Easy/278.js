@@ -3,13 +3,13 @@
 // created by 2022/06/24
 
 // Time complexity
-//     totle : O(log n)
+//     total : O(log n)
 // Space complexity
-//     totle : O(1)
+//     total : O(1)
 
 /**
  * Definition for isBadVersion()
- * 
+ *
  * @param {integer} version number
  * @return {boolean} whether the version is bad
  * isBadVersion = function(version) {
@@ -27,7 +27,8 @@ var solution = function (isBadVersion) {
      * @return {integer} The first bad version
      */
     return function (n) {
-        let l = 0, r = n;
+        let l = 0,
+            r = n;
         while (l < r) {
             const mid = Math.floor((r + l) / 2);
             const isBad = isBadVersion(mid);

@@ -4,9 +4,9 @@
 created by 2022/03/25
 
 Time complexity
-    totle : O(n logn)
+    total : O(n logn)
 Space complexity
-    totle : O(n)
+    total : O(n)
 */
 /**
  * @param {number[][]} intervals

@@ -4,9 +4,9 @@
 created by 2022/06/22
 
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 /**
  * @param {number[]} prices
@@ -21,7 +21,6 @@ var maxProfit = function (prices) {
     }
     return result;
 };
-
 
 const prices = [7, 6, 4, 3, 1];
 const result = maxProfit(prices);

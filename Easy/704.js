@@ -4,9 +4,9 @@
 created by 2022/03/16
 
 Time complexity
-    totle : O(logn)
+    total : O(logn)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 
 /**

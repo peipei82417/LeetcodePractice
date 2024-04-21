@@ -4,9 +4,9 @@
 created by 2022/04/05
 
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 /**
  * @param {number[]} height

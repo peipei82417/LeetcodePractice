@@ -5,9 +5,9 @@ import { ListNode, head } from "../DataStructure/linkedlist.js";
 created by 2022/03/09
 
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 
 /**

@@ -6,9 +6,9 @@ created by 2022/03/10
 
 BFS
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(n)
+    total : O(n)
 */
 
 /**

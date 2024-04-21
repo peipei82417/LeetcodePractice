@@ -5,14 +5,14 @@ created by 2022/03/04
 
 Algorithm : backtracking
 Time complexity
-    totle : O(m * n)
+    total : O(m * n)
 Space complexity
-    totle : O(m + n)
+    total : O(m + n)
 
 Time complexity
-    totle : O(m * n)
+    total : O(m * n)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 
 /**

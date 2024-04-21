@@ -3,12 +3,12 @@
 create by 2022/04/22
 
 Time Complexity
-    totle: O(log3 n)
+    total: O(log3 n)
 Space Complexity
-    totle: O(1)
+    total: O(1)
 */
 
-/** 
+/**
  * Forward declaration of guess API.
  * @param {number} num   your guess
  * @return 	     -1 if num is higher than the picked number
@@ -29,7 +29,9 @@ var guessNumber = function (n) {
         let mid2 = Math.floor(r - (r - l) / 3);
         let res1 = guess(mid1);
         let res2 = guess(mid2);
-        if (res1 == 0) { return mid1; }
+        if (res1 == 0) {
+            return mid1;
+        }
         if (res2 == 0) {
             return mid2;
         } else if (res1 < 0) {

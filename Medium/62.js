@@ -5,9 +5,9 @@ create by 2022/03/28
 
 Dynamic Programming
 Time Complexity
-    totle: O(m * n)
+    total: O(m * n)
 Space Complexity
-    totle: O(m * n)
+    total: O(m * n)
 */
 
 /**

@@ -4,9 +4,9 @@
 create by 2022/03/31
 
 Time Complexity
-    totle: O(n * m * n)
+    total: O(n * m * n)
 Space Complexity
-    totle: O(n)
+    total: O(n)
 */
 
 /**

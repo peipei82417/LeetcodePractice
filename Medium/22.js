@@ -5,9 +5,9 @@ created by 2022/07/29
 
 Backtracking
 Time complexity
-    totle : O( 4^n/sqrt(n) )
+    total : O( 4^n/sqrt(n) )
 Space complexity
-    totle : O( 4^n/sqrt(n) )
+    total : O( 4^n/sqrt(n) )
 */
 
 /**

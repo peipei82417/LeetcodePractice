@@ -6,9 +6,9 @@ create by 2022/04/01
 
 Depth-First Search
 Time Complexity
-    totle: O(n)
+    total: O(n)
 Space Complexity
-    totle: O(n)
+    total: O(n)
 */
 
 /**

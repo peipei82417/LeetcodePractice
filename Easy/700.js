@@ -4,9 +4,9 @@
 created by 2022/04/14
 
 Time complexity
-    totle : O(n logn)
+    total : O(n logn)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 /**
  * Definition for a binary tree node.

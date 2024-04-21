@@ -7,15 +7,15 @@ created by 2022/02/24
 Algorithm : Sort
 (Top Down Merge Sort)
 Time complexity
-    totle : O(nlogn)
+    total : O(nlogn)
 Space complexity
-    totle : O(logn)
+    total : O(logn)
 
 (Bottom Up Merge Sort)
 Time complexity
-    totle : O(nlogn)
+    total : O(nlogn)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 
 /**

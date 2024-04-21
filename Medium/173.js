@@ -1,12 +1,12 @@
-import { root, TreeNode } from "./DataStructure/tree.js"
+import { root, TreeNode } from "./DataStructure/tree.js";
 /*
 173. Binary Search Tree Iterator
 create by 2022/04/21
 
 Time Complexity
-    totle: O(1)
+    total: O(1)
 Space Complexity
-    totle: O(h) h is the height of the tree
+    total: O(h) h is the height of the tree
 */
 
 /**
@@ -42,7 +42,7 @@ BSTIterator.prototype.next = function () {
  * @return {boolean}
  */
 BSTIterator.prototype.hasNext = function () {
-    return (this.root || this.stack.length) ? true : false;
+    return this.root || this.stack.length ? true : false;
 };
 
 /**

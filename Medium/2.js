@@ -5,9 +5,9 @@ import { ListNode, head, head1 } from "../DataStructure/linkedlist.js";
 created by 2022/03/10
 
 Time complexity
-    totle : O(max(m,n))
+    total : O(max(m,n))
 Space complexity
-    totle : O(max(m,n))
+    total : O(max(m,n))
 */
 /**
  * Definition for singly-linked list.

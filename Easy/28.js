@@ -4,9 +4,9 @@
 created by 2022/08/08
 
 Time complexity
-    totle : O(n^2)
+    total : O(n^2)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 
 /**

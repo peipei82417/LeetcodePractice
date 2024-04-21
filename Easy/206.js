@@ -5,9 +5,9 @@ import { ListNode, head } from "../DataStructure/linkedlist.js";
 created by 2022/06/21
 
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 
 /**
@@ -34,4 +34,4 @@ var reverseList = function (head) {
 };
 
 const result = reverseList(head);
-console.log(result)
+console.log(result);

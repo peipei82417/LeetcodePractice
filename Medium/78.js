@@ -4,9 +4,9 @@
 created by 2022/03/14
 
 Time complexity
-    totle : O(n * 2^n)
+    total : O(n * 2^n)
 Space complexity
-    totle : O(n * 2^n)
+    total : O(n * 2^n)
 */
 
 /**
@@ -28,9 +28,9 @@ Space complexity
 /*
 Backtrack + DFS
 Time complexity
-    totle : O(n * 2^n)
+    total : O(n * 2^n)
 Space complexity
-    totle : O(n)
+    total : O(n)
 */
 
 var subsets = function (nums) {

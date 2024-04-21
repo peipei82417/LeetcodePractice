@@ -5,9 +5,9 @@ create by 2022/03/30
 
 Sliding Window
 Time Complexity
-    totle: O(l1 + l2) = O(n)
+    total: O(l1 + l2) = O(n)
 Space Complexity
-    totle: O(26) = O(1)
+    total: O(26) = O(1)
 */
 
 /**

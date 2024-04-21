@@ -5,9 +5,9 @@ import { root } from "../DataStructure/tree.js";
 created by 2022/03/10
 
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 /**
  * Definition for a binary tree node.

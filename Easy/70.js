@@ -5,9 +5,9 @@ created by 2022/06/27
 
 Dynamic Programming
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(n)
+    total : O(n)
 */
 /**
  * @param {number} n
@@ -27,4 +27,4 @@ var climbStairs = function (n) {
 };
 
 const n = climbStairs(100);
-console.log(n)
+console.log(n);

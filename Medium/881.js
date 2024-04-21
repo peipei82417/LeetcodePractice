@@ -5,9 +5,9 @@ created by 2022/03/24
 
 Greedy, Two Pointer
 Time complexity
-    totle : O(nlogn)
+    total : O(nlogn)
 Space complexity
-    totle : O(n)
+    total : O(n)
 */
 /**
  * Definition for a binary tree node.

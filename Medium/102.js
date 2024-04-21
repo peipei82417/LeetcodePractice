@@ -5,9 +5,9 @@ import { root } from "../DataStructure/tree.js";
 create by 2022/06/24
 
 Time Complexity
-    totle: O(n)
+    total: O(n)
 Space Complexity
-    totle: O(n)
+    total: O(n)
 */
 
 /**

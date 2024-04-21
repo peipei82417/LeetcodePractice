@@ -4,14 +4,14 @@
 created by 2022/03/04
 
 Time complexity
-    totle : O(nlogn)
+    total : O(nlogn)
 Space complexity
-    totle : O(1)
+    total : O(1)
     
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 
 /**

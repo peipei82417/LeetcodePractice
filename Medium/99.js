@@ -1,4 +1,4 @@
-import { root, TreeNode } from "./DataStructure/tree.js"
+import { root, TreeNode } from "./DataStructure/tree.js";
 
 /*
 99. Recover Binary Search Tree
@@ -6,9 +6,9 @@ create by 2022/04/19
 
 Recursion
 Time Complexity
-    totle: O(n)
+    total: O(n)
 Space Complexity
-    totle: O(n)
+    total: O(n)
 */
 
 /**
@@ -35,7 +35,9 @@ var recoverTree = function (root) {
     second.val = temp;
 
     function inorder(root) {
-        if (!root) { return; }
+        if (!root) {
+            return;
+        }
         inorder(root.left);
         if (prev && prev.val > root.val) {
             if (!first) {

@@ -5,9 +5,9 @@ created by 2022/03/02
 
 Algorithm : DP
 Time complexity
-    totle : O(m*n)
+    total : O(m*n)
 Space complexity
-    totle : O(m*n)
+    total : O(m*n)
 */
 
 /**

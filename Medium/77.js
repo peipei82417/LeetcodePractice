@@ -5,9 +5,9 @@ create by 2022/04/06
 
 Backtracking + DFS
 Time Complexity
-    totle: O(C(n,k))
+    total: O(C(n,k))
 Space Complexity
-    totle: O(k)
+    total: O(k)
 */
 /**
  * @param {number} n

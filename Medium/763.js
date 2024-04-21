@@ -5,9 +5,9 @@ created by 2022/03/21
 
 Greedy
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(n)
+    total : O(n)
 */
 
 /**

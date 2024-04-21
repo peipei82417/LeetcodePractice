@@ -5,15 +5,15 @@ created by 2022/03/07
 
 Dynamic Programming
 Time complexity
-    totle : O(10^7)
+    total : O(10^7)
 Space complexity
-    totle : O(10^4)
+    total : O(10^4)
 
 Dynamic Programming, Greedy
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(1)
+    total : O(1)
 */
 
 /**

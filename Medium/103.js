@@ -7,9 +7,9 @@ created by 2022/03/17
 
 Breadth-First Search(BFS)
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(n)
+    total : O(n)
 */
 
 /**

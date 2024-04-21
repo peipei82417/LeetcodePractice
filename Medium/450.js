@@ -7,9 +7,9 @@ created by 2022/03/23
 
 Greedy
 Time complexity
-    totle : O(h) high of tree
+    total : O(h) high of tree
 Space complexity
-    totle : O(n)
+    total : O(n)
 */
 
 /**

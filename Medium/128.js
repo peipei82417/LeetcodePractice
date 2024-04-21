@@ -4,9 +4,9 @@
 create by 2022/07/06
 
 Time Complexity
-    totle: O(nlog n)
+    total: O(nlog n)
 Space Complexity
-    totle: O(1)
+    total: O(1)
 */
 
 /**
@@ -37,9 +37,9 @@ var longestConsecutive1 = function (nums) {
 
 /*
 Time Complexity
-    totle: O(n)
+    total: O(n)
 Space Complexity
-    totle: O(n)
+    total: O(n)
 */
 var longestConsecutive2 = function (nums) {
     let longest_streak = 0;

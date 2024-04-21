@@ -4,17 +4,26 @@
 create by 2022/04/01
 
 Time Complexity
-    totle: O(1)
+    total: O(1)
 Space Complexity
-    totle: O(n)
+    total: O(n)
 */
-
+function Node(key, val) {
+    this.key = key;
+    this.val = val;
+    this.next = null;
+    this.prev = null;
+}
 /**
  * @param {number} capacity
  */
 var LRUCache = function (capacity) {
-    this._capacity = capacity;
-    this._map = new Map();
+    this.capacity = capacity;
+    this.map = new Map();
+    this.head = new Node("head", 0);
+    this.tail = new Node("tail", 0);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
 };
 
 /**
@@ -22,14 +31,14 @@ var LRUCache = function (capacity) {
  * @return {number}
  */
 LRUCache.prototype.get = function (key) {
-    const value = this._map.get(key);
-    if (value === undefined) {
+    const node = this.map.get(key);
+    if (node === undefined) {
         return -1;
     }
-    this._map.delete(key);
-    this._map.set(key, value);
+    this.remove(node);
+    this.insert(node);
 
-    return value;
+    return node.val;
 };
 
 /**
@@ -38,12 +47,32 @@ LRUCache.prototype.get = function (key) {
  * @return {void}
  */
 LRUCache.prototype.put = function (key, value) {
-    if (this._map.size >= this._capacity && !this._map.has(key)) {
-        const firstKey = this._map.keys().next().value;
-        this._map.delete(firstKey);
+    if (this.map.has(key)) {
+        this.remove(this.map.get(key));
     }
-    this._map.delete(key);
-    this._map.set(key, value);
+    const node = new Node(key, value);
+    this.insert(node);
+    this.map.set(key, node);
+    if (this.map.size > this.capacity) {
+        const last = this.tail.prev;
+        this.map.delete(last.key);
+        this.remove(last);
+    }
+};
+
+LRUCache.prototype.remove = function (node) {
+    const next = node.next;
+    const prev = node.prev;
+    prev.next = next;
+    next.prev = prev;
+};
+
+LRUCache.prototype.insert = function (node) {
+    const first = this.head.next;
+    first.prev = node;
+    node.prev = this.head;
+    node.next = first;
+    this.head.next = node;
 };
 
 /**

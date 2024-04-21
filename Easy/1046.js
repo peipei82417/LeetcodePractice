@@ -4,9 +4,9 @@
 create by 2022/04/07
 
 Time Complexity
-    totle: O(n logn)
+    total: O(n logn)
 Space Complexity
-    totle: O(1)
+    total: O(1)
 */
 /**
  * @param {number[]} stones

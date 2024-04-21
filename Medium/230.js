@@ -1,13 +1,13 @@
-import { root, TreeNode } from "../DataStructure/tree.js"
+import { root, TreeNode } from "../DataStructure/tree.js";
 /*
 230. Kth Smallest Element in a BST
 create by 2022/04/18
 
 Recursion
 Time Complexity
-    totle: O(n)
+    total: O(n)
 Space Complexity
-    totle: O(n)
+    total: O(n)
 */
 
 /**
@@ -34,7 +34,7 @@ var kthSmallest = function (root, k) {
         arr.push(root.val);
         n += 1;
         inOrder(root.right);
-    }
+    };
     inOrder(root);
     return arr[k - 1];
 };

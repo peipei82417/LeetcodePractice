@@ -5,9 +5,9 @@ create by 2022/03/30
 
 Binary Search
 Time Complexity
-    totle: O(nlogn)
+    total: O(nlogn)
 Space Complexity
-    totle: O(1)
+    total: O(1)
 */
 
 /**

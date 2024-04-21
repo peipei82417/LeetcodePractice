@@ -7,9 +7,9 @@ created by 2022/03/01
 
 Algorithm : BFS
 Time complexity
-    totle : O(n)
+    total : O(n)
 Space complexity
-    totle : O(n)
+    total : O(n)
 */
 
 /**

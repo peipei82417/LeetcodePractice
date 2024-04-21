@@ -6,9 +6,9 @@ created by 2022/06/21
 
 Floyd's Tortoise and Hare (Cycle Detection)
 Time complexity
-    totle : O(n ~ n^2)
+    total : O(n ~ n^2)
 Space complexity
-    totle : O(n)
+    total : O(n)
 */
 /**
  * Definition for singly-linked list.
@@ -44,4 +44,4 @@ var detectCycle = function (head) {
 };
 
 const result = detectCycle(head);
-console.log(result)
+console.log(result);
