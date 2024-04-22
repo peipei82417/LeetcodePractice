@@ -1,13 +1,12 @@
-import { ListNode, head, head1 } from "../DataStructure/linkedlist.js";
 /*
 2. Add Two Numbers
 
-created by 2022/03/10
+create by 2024/04/19
 
-Time complexity
-    total : O(max(m,n))
-Space complexity
-    total : O(max(m,n))
+Time Complexity
+    total: O(n)
+Space Complexity
+    total: O(n)
 */
 /**
  * Definition for singly-linked list.
@@ -22,27 +21,24 @@ Space complexity
  * @return {ListNode}
  */
 var addTwoNumbers = function (l1, l2) {
-    const dummyHead = new ListNode(0);
-    let curr = dummyHead;
     let carry = 0;
+    let head = new ListNode(0);
+    let result = head;
     while (l1 || l2) {
-        const x = l1 != null ? l1.val : 0;
-        const y = l2 != null ? l2.val : 0;
-        const sum = x + y + carry;
+        let val1 = l1?.val ?? 0;
+        let val2 = l2?.val ?? 0;
+        const sum = val1 + val2 + carry;
+        const node = new ListNode(sum % 10);
         carry = Math.floor(sum / 10);
-        curr.next = new ListNode(sum % 10);
-        curr = curr.next;
-        if (l1) {
-            l1 = l1.next;
-        }
-        if (l2) {
-            l2 = l2.next;
-        }
+        head.next = node;
+        head = head.next;
+        l1 = l1?.next;
+        l2 = l2?.next;
     }
-    if (carry > 0) {
-        curr.next = new ListNode(carry);
+    if (carry) {
+        head.next = new ListNode(1);
     }
-    return dummyHead.next;
+    return result.next;
 };
 
-console.log(addTwoNumbers(head, head1));
+console.log(addTwoNumbers(l11, l21));

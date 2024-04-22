@@ -1,48 +1,50 @@
 /*
 567. Permutation in String
 
-create by 2022/03/30
+create by 2024/04/16
 
-Sliding Window
 Time Complexity
-    total: O(l1 + l2) = O(n)
+    total: O(n)
 Space Complexity
-    total: O(26) = O(1)
+    total: O(n)
 */
-
 /**
  * @param {string} s1
  * @param {string} s2
  * @return {boolean}
  */
 var checkInclusion = function (s1, s2) {
-    const l1 = s1.length;
-    const l2 = s2.length;
-    const chars = new Array(26).fill(0);
-    const a = "a".charCodeAt(0);
-
-    for (let i = 0; i < l1; i++) {
-        chars[s1.charCodeAt(i) - a]--;
+    if (s1.length > s2.length) {
+        return false;
     }
+    let chars = {};
+    for (const char of s1) {
+        chars[char] = (chars[char] || 0) + 1;
+    }
+    let left = 0,
+        right = 0,
+        requiredLength = s1.length;
 
-    for (let i = 0; i < l2; i++) {
-        chars[s2.charCodeAt(i) - a]++;
-
-        if (i < l1 - 1) {
-            continue;
+    while (right < s2.length) {
+        if (chars[s2[right]] > 0) {
+            requiredLength--;
         }
-        if (i > l1 - 1) {
-            chars[s2.charCodeAt(i - l1) - a]--;
-        }
-        if (chars.every((v) => v === 0)) {
+        chars[s2[right]]--;
+        right++;
+        if (requiredLength === 0) {
             return true;
+        }
+        if (right - left === s1.length) {
+            if (chars[s2[left]] >= 0) {
+                requiredLength++;
+            }
+            chars[s2[left]]++;
+            left++;
         }
     }
     return false;
 };
 
-//const s1 = "ab", s2 = "eidbaooo"; // true
-const s1 = "ab",
-    s2 = "eidboaoo"; // false
-
-console.log(checkInclusion(s1, s2));
+let s1 = 'ab',
+    s2 = 'eidboao';
+console.log(checkInclusion(s1, s2)); // true

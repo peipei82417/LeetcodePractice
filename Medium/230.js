@@ -1,15 +1,13 @@
-import { root, TreeNode } from "../DataStructure/tree.js";
 /*
 230. Kth Smallest Element in a BST
-create by 2022/04/18
 
-Recursion
+create by 2024/04/22
+
 Time Complexity
     total: O(n)
 Space Complexity
     total: O(n)
 */
-
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -24,20 +22,15 @@ Space Complexity
  * @return {number}
  */
 var kthSmallest = function (root, k) {
-    const arr = [];
-    let n = 0;
-    const inOrder = (root) => {
-        if (!root || k === n) {
+    const nums = new Array(0);
+    var inorder = function (node) {
+        if (!node) {
             return;
         }
-        inOrder(root.left);
-        arr.push(root.val);
-        n += 1;
-        inOrder(root.right);
+        inorder(node.left);
+        nums.push(node.val);
+        inorder(node.right);
     };
-    inOrder(root);
-    return arr[k - 1];
+    inorder(root);
+    return nums[k - 1];
 };
-
-const k = 3;
-console.log(kthSmallest(root, k));

@@ -1,5 +1,5 @@
 /*
-102. Binary Tree Level Order Traversal
+199. Binary Tree Right Side View
 
 create by 2024/04/22
 
@@ -19,20 +19,21 @@ Space Complexity
  */
 /**
  * @param {TreeNode} root
- * @return {number[][]}
+ * @return {number[]}
  */
-var levelOrder = function (root) {
-    const results = [];
+var rightSideView = function (root) {
+    const result = [];
     if (!root) {
-        return results;
+        return result;
     }
     const queue = [root];
     while (queue.length) {
-        const result = [];
         const size = queue.length;
         for (let i = 0; i < size; i++) {
             const node = queue.shift();
-            result.push(node.val);
+            if (i === size - 1) {
+                result.push(node.val);
+            }
             if (node.left) {
                 queue.push(node.left);
             }
@@ -40,9 +41,8 @@ var levelOrder = function (root) {
                 queue.push(node.right);
             }
         }
-        results.push(result);
     }
-    return results;
+    return result;
 };
 
 const node5 = new TreeNode(7, null, null);
@@ -51,4 +51,4 @@ const node3 = new TreeNode(20, node4, node5);
 const node2 = new TreeNode(9, null, null);
 const node1 = new TreeNode(3, node2, node3);
 
-console.log(levelOrder(node1));
+console.log(rightSideView(node1));

@@ -1,4 +1,3 @@
-import { root } from "../DataStructure/tree.js";
 /*
 110. Balanced Binary Tree
 
@@ -9,7 +8,6 @@ Time complexity
 Space complexity
     total : O(n)
 */
-
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -23,21 +21,20 @@ Space complexity
  * @return {boolean}
  */
 var isBalanced = function (root) {
-    const maxdp = (root) => {
-        if (!root || !result) {
+    let res = true;
+    function maxDepth(node) {
+        if (!node) {
             return 0;
         }
-        let l = maxdp(root.left);
-        let r = maxdp(root.right);
-        if (Math.abs(l - r) > 1) {
-            result = false;
-            return 0;
+        const left = maxDepth(node.left);
+        const right = maxDepth(node.right);
+        if (Math.abs(left - right) > 1) {
+            res = false;
         }
-        return Math.max(l, r) + 1;
-    };
-    let result = true;
-    maxdp(root);
-    return result;
+        return Math.max(left, right) + 1;
+    }
+    maxDepth(root);
+    return res;
 };
 
 console.log(isBalanced(root));

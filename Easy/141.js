@@ -1,14 +1,3 @@
-/*
-141. Linked List Cycle
-
-created by 2022/03/08
-
-Time complexity
-    total : O(n)
-Space complexity
-    total : O(1)
-*/
-
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -16,22 +5,19 @@ Space complexity
  *     this.next = null;
  * }
  */
-
 /**
  * @param {ListNode} head
  * @return {boolean}
  */
 var hasCycle = function (head) {
-    if (!head || !head.next) {
-        return false;
-    }
-    while (head) {
-        if (head.flag) {
+    let slow = head,
+        fast = head;
+    while (slow && fast?.next) {
+        slow = slow.next;
+        fast = fast.next.next;
+        if (slow === fast) {
             return true;
-        } else {
-            head.flag = true;
         }
-        head = head.next;
     }
     return false;
 };
