@@ -1,30 +1,32 @@
 /*
 70. Climbing Stairs
 
-created by 2022/06/27
+create by 2024/04/26
 
-Dynamic Programming
-Time complexity
-    total : O(n)
-Space complexity
-    total : O(n)
+Time Complexity
+    total: O(n)
+Space Complexity
+    total: O(n)
 */
 /**
  * @param {number} n
  * @return {number}
  */
 var climbStairs = function (n) {
-    if (n === 1) {
-        return 1;
-    } else if (n === 2) {
-        return 2;
+    const db = new Array(n);
+    for (let i = 0; i < n; i++) {
+        if (i === 0) {
+            db[i] = 1;
+        } else if (i === 1) {
+            db[i] = 2;
+        } else {
+            db[i] = db[i - 1] + db[i - 2];
+        }
     }
-    const dp = [1, 2];
-    for (let i = 2; i < n; i++) {
-        dp[i] = dp[i - 1] + dp[i - 2];
-    }
-    return dp[n - 1];
+    return db[n - 1];
 };
 
-const n = climbStairs(100);
-console.log(n);
+console.log(climbStairs(2));
+console.log(climbStairs(3));
+console.log(climbStairs(4));
+console.log(climbStairs(5));

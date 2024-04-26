@@ -1,64 +1,63 @@
 /*
 207. Course Schedule
 
-created by 2022/07/26
+create by 2024/04/26
 
-Time complexity
-    total : O(n)
-Space complexity
-    total : O(n)
+Time Complexity
+    total: O(n)
+Space Complexity
+    total: O(n)
 */
-
 /**
  * @param {number} numCourses
  * @param {number[][]} prerequisites
  * @return {boolean}
  */
-const canFinish = function (numCourses, prerequisites) {
-    const graph = new Array(numCourses);
-
+var canFinish = function (numCourses, prerequisites) {
+    const map = new Map();
     for (let i = 0; i < numCourses; i++) {
-        graph[i] = new Array(0);
+        map.set(i, []);
+    }
+    for (const [crs, pre] of prerequisites) {
+        if (!map.has(crs)) {
+            return false;
+        }
+        map.get(crs).push(pre);
     }
 
-    for (const prerequisite of prerequisites) {
-        graph[prerequisite[1]].push(prerequisite[0]);
-    }
+    const visit = new Set();
+    var dfs = function (crs) {
+        if (visit.has(crs)) {
+            return false;
+        }
+        if (map.get(crs).length === 0) {
+            return true;
+        }
+        visit.add(crs);
+        for (const pre of map.get(crs)) {
+            if (!dfs(pre)) {
+                return false;
+            }
+        }
+        visit.delete(crs);
+        map.set(crs, []);
+        return true;
+    };
 
-    let isVisited = new Array(numCourses).fill(null);
-    for (let i = 0; i < numCourses; i++) {
-        if (dfs(graph, i, isVisited)) {
+    for (const [crs] of prerequisites) {
+        if (!dfs(crs)) {
             return false;
         }
     }
     return true;
 };
 
-const dfs = function (graph, curr, isVisited) {
-    if (isVisited[curr] === true) {
-        return true;
-    }
-    if (isVisited[curr] === false) {
-        return false;
-    }
-
-    isVisited[curr] = true;
-
-    for (let t of graph[curr]) {
-        if (dfs(graph, t, isVisited)) {
-            return true;
-        }
-    }
-
-    isVisited[curr] = false;
-
-    return false;
-};
-
-const numCourses = 2,
+const numCourses = 5,
     prerequisites = [
-        [1, 0],
         [0, 1],
+        [0, 2],
+        [1, 3],
+        [1, 4],
+        [3, 4],
     ];
-const result = canFinish(numCourses, prerequisites);
-console.log(result);
+console.log(canFinish(numCourses, prerequisites));

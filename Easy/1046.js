@@ -1,10 +1,10 @@
 /*
 1046. Last Stone Weight
 
-create by 2022/04/07
+create by 2024/04/24
 
 Time Complexity
-    total: O(n logn)
+    total: O(n * nlog(n))
 Space Complexity
     total: O(1)
 */
@@ -14,13 +14,13 @@ Space Complexity
  */
 var lastStoneWeight = function (stones) {
     while (stones.length > 1) {
-        stones.sort((a, b) => {
-            return b - a;
-        });
-        stones.unshift(stones.shift() - stones.shift());
+        stones.sort((a, b) => b - a);
+        const stone1 = stones.shift();
+        const stone2 = stones.shift();
+        if (stone1 === stone2) {
+            continue;
+        }
+        stones.push(Math.abs(stone1 - stone2));
     }
     return stones.length === 1 ? stones[0] : 0;
 };
-
-let stones = [2, 7, 4, 1, 9, 1];
-console.log(lastStoneWeight(stones));

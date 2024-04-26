@@ -1,56 +1,33 @@
 /*
 78. Subsets
 
-created by 2022/03/14
+create by 2024/04/23
 
-Time complexity
-    total : O(n * 2^n)
-Space complexity
-    total : O(n * 2^n)
+Time Complexity
+    total: O(n * 2^n)
+Space Complexity
+    total: O(n)
 */
-
 /**
  * @param {number[]} nums
  * @return {number[][]}
  */
-// var subsets = function (nums) {
-//     const result = [[]];
-//     for (const num of nums) {
-//         const subset = [];
-//         for (const list of result) {
-//             subset.push([...list, num]);
-//         }
-//         result.push(...subset);
-//     }
-//     return result;
-// };
-
-/*
-Backtrack + DFS
-Time complexity
-    total : O(n * 2^n)
-Space complexity
-    total : O(n)
-*/
-
 var subsets = function (nums) {
-    const result = [];
-    const backtrack = function (n, s, subset) {
-        if (subset.length === n) {
-            result.push([...subset]);
-            return;
+    const results = [];
+    const subset = [];
+    var backtracking = function (idx) {
+        if (idx >= nums.length) {
+            return results.push(subset.slice());
         }
-        for (let i = s; i < nums.length; i++) {
-            subset.push(nums[i]);
-            backtrack(n, i + 1, subset);
-            subset.pop();
-        }
+        subset.push(nums[idx]);
+        backtracking(idx + 1);
+        subset.pop();
+        backtracking(idx + 1);
     };
-    for (let i = 0; i < nums.length + 1; i++) {
-        backtrack(i, 0, []);
-    }
-    return result;
+    backtracking(0);
+    return results;
 };
 
-let nums = [1, 2, 3];
+const nums = [1, 2];
 console.log(subsets(nums));
+// Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]

@@ -1,51 +1,48 @@
 /*
 695. Max Area of Island
 
-created by 2022/03/22
+create by 2024/04/25
 
-Greedy
-Time complexity
-    total : O(m * n)
-Space complexity
-    total : O(m * n)
+Time Complexity
+    total: O(n)
+Space Complexity
+    total: O(1)
 */
-
 /**
  * @param {number[][]} grid
  * @return {number}
  */
 var maxAreaOfIsland = function (grid) {
-    const row = grid.length,
-        col = grid[0].length;
-    let result = 0;
-    let dfs = function (i, j) {
-        if (i > row - 1 || j > col - 1 || i < 0 || j < 0 || grid[i][j] === 0) {
+    let maxArea = 0;
+    var dfs = function (y, x) {
+        if (y < 0 || y >= grid.length || x < 0 || x >= grid[0].length || grid[y][x] !== 1) {
             return 0;
         }
-        grid[i][j] = 0;
-        return (
-            1 + dfs(i + 1, j) + dfs(i - 1, j) + dfs(i, j + 1) + dfs(i, j - 1)
-        );
+        grid[y][x] = 0;
+        return 1 + dfs(y + 1, x) + dfs(y - 1, x) + dfs(y, x + 1) + dfs(y, x - 1);
     };
     for (let i = 0; i < grid.length; i++) {
-        for (let j = 0; j < grid[i].length; j++) {
-            if (grid[i][j] === 1) {
-                result = Math.max(result, dfs(i, j));
+        const row = grid[i];
+        for (let j = 0; j < row.length; j++) {
+            const cell = row[j];
+            if (cell) {
+                const area = dfs(i, j);
+                maxArea = Math.max(maxArea, area);
             }
         }
     }
-    return result;
+    return maxArea;
 };
 
-let grid = [
-    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-    [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
-    [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-];
-let grid2 = [[0, 0, 0, 0, 0, 0, 0, 0]];
-console.log(maxAreaOfIsland(grid));
+console.log(
+    maxAreaOfIsland([
+        [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+        [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
+        [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+    ])
+);
